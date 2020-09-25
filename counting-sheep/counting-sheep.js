@@ -10,3 +10,15 @@
 //1: Another sheep jumps over the fence
 //All sheep jumped over the fence
 
+const countingSheep = function(sheep) {
+    if (sheep === 0){ 
+        return 'All sheep jumped over the fence';
+    } else {
+        return sheep + ': Another sheep jumps over the fence ' + countingSheep(sheep - 1);
+    }
+        
+}
+
+let sheep = 3
+
+console.log(countingSheep(sheep));
